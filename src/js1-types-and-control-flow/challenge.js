@@ -1,5 +1,7 @@
 /* This challenge is designed to test you knowledge of Types and Control Flow (If and Switch Statements) */
 
+import { isStringLiteral } from "@babel/types";
+
 /* 
   All challenges in this repository are seperated into four levels: Foundation, Intermediate, Advanced and Expert.
   The expectation is to complete all Foundation level challenges, with Intermediate and upwards pushing your knowledge
@@ -20,6 +22,7 @@ const lastName = "Smith";
 
 export const createFullName = () => {
   // Write your code here
+  return firstName + " " + lastName;
 };
 
 /**
@@ -33,7 +36,14 @@ const largeNumber2 = 200;
 
 export const findLargestNumber = () => {
   // Write your code here
+  if (largeNumber1 > largeNumber2) {
+    return largeNumber1; 
+  } else {
+    return largeNumber2;
+  }
 };
+
+
 
 /**
  * A function that programmatically adds two numbers together.
@@ -46,6 +56,7 @@ const addNumber2 = 24;
 
 export const addNumbers = () => {
   // Write your code here
+  return addNumber1 + addNumber2;
 };
 
 /* Intermediate Challenges */
@@ -60,6 +71,7 @@ const password = "thisIsMyVeryLongPassword123456789";
 
 export const findLengthOfPassword = () => {
   // Write your code here
+  return password.length;
 };
 
 /**
@@ -76,6 +88,18 @@ const thing = "I am a thing";
 
 export const findType = () => {
   // Write your code here
+
+  const dataType = typeof thing
+
+  if(dataType === "string"){
+        return "This is a string";
+      } else if(dataType === "number") {
+        return "This is a number";
+      } else if(dataType === "boolean") {
+        return "This is a boolean";
+      } else {
+        return "I don't know what this thing is"
+      }
 };
 
 /**
@@ -89,6 +113,10 @@ const nameTagOption = "Timothy";
 
 export const getIsValidOnNameTag = () => {
   // Write your code here
+    const firstLetter = nameTagOption.substring(0,1);
+    const suitableNameTag = nameTagOption.length <= 8 && firstLetter === firstLetter.toUpperCase();
+
+    return suitableNameTag;
 };
 
 /* Advanced Challenges */
