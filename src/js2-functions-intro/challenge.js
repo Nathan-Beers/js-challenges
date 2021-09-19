@@ -18,6 +18,8 @@
  */
 export const createFullName = (firstName, lastName) => {
   /* Write your code here */
+  const fullName = firstName + " " + lastName;
+  return fullName
 };
 
 /**
@@ -28,8 +30,13 @@ export const createFullName = (firstName, lastName) => {
  * @param {number} number2 200
  * @returns {number} 100
  */
-export const findSmallestNumber = (/* Write the parameters here */) => {
+export const findSmallestNumber = (number1, number2) => {
   /* Write your code here */
+  if(number1 < number2) {
+    return number1;
+  } else {
+    return number2;
+  }
 };
 
 /**
@@ -40,9 +47,12 @@ export const findSmallestNumber = (/* Write the parameters here */) => {
  * @param {number} number2 6
  * @returns {number} 18
  */
-export const multiplyNumbers = (/* Write the parameters here */) => {
+export const multiplyNumbers = (number1, number2) => {
   /* Write your code here */
+  const handleMupltiply = number1 * number2;
+  return handleMupltiply;
 };
+
 
 /* Intermediate Challenges */
 
@@ -58,6 +68,15 @@ export const multiplyNumbers = (/* Write the parameters here */) => {
  */
 export const checkIfNewHighScore = (score, highScore) => {
   /* Write your code here */
+  const newHighScore = score > highScore
+
+  if (newHighScore) {
+    return "You got a new high score!"
+  } else if (score === highScore) {
+    return "So close!"
+  } else {
+    return "Better luck next time!"
+  }
 };
 
 /**
@@ -68,6 +87,9 @@ export const checkIfNewHighScore = (score, highScore) => {
  */
 export const celsiusToFahrenheit = (tempInCelsius) => {
   /* Write your code here */
+  const tempInFahrenheit = (tempInCelsius *9/5)+32;
+
+  return `${tempInCelsius} degrees celsius is ${tempInFahrenheit} degrees fahrenheit`;
 };
 
 /**
@@ -81,6 +103,11 @@ export const celsiusToFahrenheit = (tempInCelsius) => {
  */
 export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
   /* Write your code here */
+  const lifeTime = maxAge - age;
+  const perYear = snickersPerDay * 365
+  const CalulateSupply = lifeTime * perYear;
+  return CalulateSupply;
+
 };
 
 /* Advanced Challenges */
@@ -101,7 +128,7 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  */
 export const getGrade = (score) => {
   /* Write your code here */
-};
+  
 
 /**
  * A function that find the area of a circle to 2 decimal places.
