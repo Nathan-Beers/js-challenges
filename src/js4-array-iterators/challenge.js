@@ -13,6 +13,10 @@
  * Foundation Challenges
  */
 
+// .map() -> MAKES A NEW ARRAY WITH CHANGED VALUES
+// .filter() -> MAKES A NEW ARRAY BUT ONLY PASSES ELEMENTS THAT PASS CERTAIN CONDITIONS
+// .forEach() -> GIVES YOU ACCESS TO EACH ELEMENT IN THE ARRAY ONE BY ONE
+
 /**
  * A function that takes an array of Booleans and then removes the false values from the given array.
  * It should create a new array only consiting of the true values.
@@ -22,7 +26,8 @@
  */
 
 export const removeFalseValues = (booleanArr) => {
-  return;
+  const removeFalse = booleanArr.filter((boolean) => boolean === true)
+  return removeFalse;
 };
 
 /**
@@ -34,7 +39,8 @@ export const removeFalseValues = (booleanArr) => {
  */
 
 export const createPercentageList = (numbersArr) => {
-  return;
+  const convertToPercentage = numbersArr.map((number) => `${number * 100}%`)
+  return convertToPercentage;
 };
 
 /**
@@ -47,7 +53,8 @@ export const createPercentageList = (numbersArr) => {
  */
 
 export const createListOfPoessessions = (possessionsArr, name) => {
-  return;
+  const listOfPoessessions = possessionsArr.map((possession) => `${name} ${possession}`)
+  return listOfPoessessions;
 };
 
 /**
