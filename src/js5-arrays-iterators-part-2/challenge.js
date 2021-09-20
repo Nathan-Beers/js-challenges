@@ -22,7 +22,10 @@
  */
 
 export const totalScoresArr = (scoresArr) => {
-  return;
+  const totalScore = scoresArr.reduce((accumulator, current) => {
+    return accumulator + current;
+  }, 0);
+  return totalScore;
 };
 
 /**
@@ -35,8 +38,12 @@ export const totalScoresArr = (scoresArr) => {
  */
 
 export const reverseString = (toReverse) => {
-  return;
-};
+  const newString = toReverse.split("");
+  const reversed = newString.reverse();
+  const newStringJoined = reversed.join("");
+
+    return newStringJoined;
+  };
 
 /**
  * A function that arranges an array of characters alphabetically.
@@ -48,7 +55,9 @@ export const reverseString = (toReverse) => {
  */
 
 export const sortCharactersAlphabetically = (charcterArr) => {
-  return;
+  const toLowercase = charcterArr.map((character) => character.toLowerCase());
+  const sortCharacters = toLowercase.sort();
+  return sortCharacters;
 };
 
 /**
