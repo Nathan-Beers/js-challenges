@@ -22,6 +22,9 @@
  */
 export const getFurniturePrice = (furniture) => {
   /* Write code here */
+  const price = furniture.price;
+
+  return price;
 };
 
 /**
@@ -33,6 +36,8 @@ export const getFurniturePrice = (furniture) => {
  */
 export const setFurnitureStoreLocation = (furniture, location) => {
   /* Write code here */
+  furniture.location = location;
+  return furniture;
 };
 
 /**
@@ -47,6 +52,14 @@ export const setFurnitureStoreLocation = (furniture, location) => {
  */
 export const makeSpaceship = (name, noOfSeats, engineType, canTravelSolarSystems) => {
   /* Write code here */
+  let spaceShip = {
+    name,
+    noOfSeats,
+    engineType,
+    canTravelSolarSystems
+  }
+
+  return spaceShip;
 };
 
 /* Intermediate Challenges */
@@ -60,7 +73,16 @@ export const makeSpaceship = (name, noOfSeats, engineType, canTravelSolarSystems
  */
 export const setUserName = (user, username) => {
   /* Write code here */
+  const isUserNameSet = user.hasOwnProperty("username");
+
+  if (!isUserNameSet) {
+    user.username = username
+  }
+
+  return user
 };
+
+
 
 /**
  * A function which takes a customer object from the database and returns the same object where the name has been
@@ -71,6 +93,7 @@ export const setUserName = (user, username) => {
  */
 export const splitFullNameToFirstAndLast = (customer) => {
   /* Write code here */
+    
 };
 
 /**
