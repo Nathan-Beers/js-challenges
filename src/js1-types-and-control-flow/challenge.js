@@ -131,6 +131,8 @@ const stringToConvert = "14.45";
 
 export const convertStringToNumber = () => {
   // Write your code here
+  let convertString = Number(stringToConvert)
+  return convertString
 };
 
 /**
