@@ -128,7 +128,7 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  */
 export const getGrade = (score) => {
   /* Write your code here */
-  
+};
 
 /**
  * A function that find the area of a circle to 2 decimal places.
